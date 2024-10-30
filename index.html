@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background-color: red;
+            padding: 50px;
+        }
+
+        .painel{
+            margin: 20px auto;
+            width: 500px;
+            height: 100vh;
+            background-color: white;
+            border-radius: 20px;
+            text-align: center;
+            padding: 30px;
+        }
+
+        p{
+            font-weight: bold;
+        }
+
+        .s{
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            color: white;
+            border-radius: 10px;
+            border: lightcoral;
+            font-size: 15px;
+            margin-left: -70px;
+            border: 2px solid white;
+        }
+
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            color: white;
+            border-radius: 10px;
+            border: lightcoral;
+            font-size: 15px;
+            margin-left: 10px;
+            border: 2px solid white;
+            
+
+        }
+
+        iframe{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        /* @media(max-width:600px){
+
+        } */
+
+   </style>
+   <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/68/68493.png">
+    <title>Da e Bi 💗</title>
+</head>
+<body>
+    <div class="painel">
+        <h1>Feliz nosso dia 30💗💗</h1>
+        
+        <iframe height="450px" src="https://www.youtube.com/embed/uUtQEKQufGo" title="301024" frameborder="0" allow="accelerometer;  autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loop allowfullscreen></iframe>
+        <p>me ama?</p>
+        <a href="https://open.spotify.com/intl-pt/track/3PlKQNlbL4767rND3HnqSI?si=4da7bcc6bdb64301" target="_blank"><button class="s">Sim!</button></a>
+        <button onclick="fuja()" onmouseover="fuja()" id="nao">Não!</button>
+    </div>
+
+    <script>
+        function fuja(){
+            console.log("Eita..")
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+
+        }
+    </script>
+    
+</body>
+
+</html>
